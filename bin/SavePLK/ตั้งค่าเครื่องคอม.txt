@@ -1,0 +1,4 @@
+[ขั้นตอน]
+1.ติดตั้ง .NET 4.6.1
+2.ตั้ง short date format เป็น dd/MM/yyyy
+3.แก้ไขไฟล์ key.txt
