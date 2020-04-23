@@ -17,3 +17,4 @@ E:\DotNet\SavePLK\SavePLK\obj\Debug\SavePLK.csproj.CoreCompileInputs.cache
 E:\DotNet\SavePLK\SavePLK\obj\Debug\SavePLK.csproj.CopyComplete
 E:\DotNet\SavePLK\SavePLK\obj\Debug\SavePLK.exe
 E:\DotNet\SavePLK\SavePLK\obj\Debug\SavePLK.pdb
+E:\DotNet\SavePLK\SavePLK\obj\Debug\SavePLK.csprojAssemblyReference.cache

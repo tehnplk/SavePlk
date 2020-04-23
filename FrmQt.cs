@@ -45,7 +45,7 @@ namespace SavePLK
             if (card == "เหลือง")
             {
                 label1.BackColor = Color.Yellow;
-                label1.Text = "พักค้างคืนชั่วคราวต้องพักที่โรงแรมที่จัดให้เท่านั้น";
+                label1.Text = "คนต่างจังหวัดพักค้างคืนชั่วคราวต้องพักที่โรงแรมที่จัดให้เท่านั้น";
                 label1.ForeColor = Color.Black;
                 txtQtHomeAddr.Enabled = false;
                 txtQtHomeTambol.Enabled = false;

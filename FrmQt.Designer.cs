@@ -89,7 +89,7 @@
             // cbQtHomeAmphur
             // 
             this.cbQtHomeAmphur.AutoCompleteCustomSource.AddRange(new string[] {
-            "เมือง",
+            "เมืองพิษณุโลก",
             "นครไทย",
             "ชาติตระการ",
             "บางระกำ",
@@ -104,7 +104,7 @@
             this.cbQtHomeAmphur.FormattingEnabled = true;
             this.cbQtHomeAmphur.ItemHeight = 25;
             this.cbQtHomeAmphur.Items.AddRange(new object[] {
-            "เมือง",
+            "เมืองพิษณุโลก",
             "นครไทย",
             "ชาติตระการ",
             "บางระกำ",

@@ -122,6 +122,7 @@
             // 
             // txtDateBack
             // 
+            this.txtDateBack.Enabled = false;
             this.txtDateBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txtDateBack.Location = new System.Drawing.Point(26, 130);
             this.txtDateBack.Mask = "00/00/0000";
@@ -159,9 +160,9 @@
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(314, 32);
+            this.label1.Size = new System.Drawing.Size(460, 32);
             this.label1.TabIndex = 3;
-            this.label1.Text = "เข้าออกไม่ค้างคืนที่พิษณุโลก";
+            this.label1.Text = "คนต่างจังหวัดเข้าออกไม่ค้างคืนที่พิษณุโลก";
             // 
             // FrmPass
             // 
