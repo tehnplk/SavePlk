@@ -50,7 +50,6 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button5 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.txtVehicleNo = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -60,9 +59,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtFullName = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.txtCid = new System.Windows.Forms.MaskedTextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -73,6 +72,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.MintCream;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.txtTel);
             this.panel1.Controls.Add(this.cbComeFrom);
             this.panel1.Controls.Add(this.label6);
@@ -89,7 +89,6 @@
             this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.txtVehicleNo);
             this.panel1.Controls.Add(this.label7);
@@ -99,7 +98,6 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txtFullName);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.txtCid);
             this.panel1.Location = new System.Drawing.Point(12, 12);
@@ -161,12 +159,12 @@
             this.button7.BackColor = System.Drawing.Color.Aquamarine;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.button7.ForeColor = System.Drawing.Color.Black;
-            this.button7.Location = new System.Drawing.Point(730, 633);
+            this.button7.Location = new System.Drawing.Point(384, 633);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(241, 54);
             this.button7.TabIndex = 21;
             this.button7.TabStop = false;
-            this.button7.Text = "ดูข้อมูลคนผ่านทาง online";
+            this.button7.Text = "ดูข้อมูล online";
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
@@ -176,21 +174,23 @@
             this.groupBox2.Controls.Add(this.button8);
             this.groupBox2.Controls.Add(this.button6);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.groupBox2.Location = new System.Drawing.Point(526, 307);
+            this.groupBox2.Location = new System.Drawing.Point(509, 307);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(445, 320);
+            this.groupBox2.Size = new System.Drawing.Size(462, 320);
             this.groupBox2.TabIndex = 103;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "กรณีเป็นคนพิษณุโลก";
             // 
             // button8
             // 
-            this.button8.BackColor = System.Drawing.Color.HotPink;
-            this.button8.Location = new System.Drawing.Point(43, 133);
+            this.button8.BackColor = System.Drawing.Color.DeepPink;
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.button8.ForeColor = System.Drawing.Color.White;
+            this.button8.Location = new System.Drawing.Point(17, 133);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(366, 75);
+            this.button8.Size = new System.Drawing.Size(422, 75);
             this.button8.TabIndex = 16;
-            this.button8.Text = "5.คนพิษณุโลกมีบัตรสีชมพู";
+            this.button8.Text = "5.บัตรชมพูเดินทางกลับมาจากต่างจังหวัด";
             this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
@@ -198,11 +198,12 @@
             // button6
             // 
             this.button6.BackColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(43, 43);
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.button6.Location = new System.Drawing.Point(17, 43);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(366, 75);
+            this.button6.Size = new System.Drawing.Size(422, 75);
             this.button6.TabIndex = 15;
-            this.button6.Text = "4.ออกไปตจว.แล้วกลับเข้ามา";
+            this.button6.Text = "4.คนพิษณุโลกเดินทางกลับมาจากต่างจังหวัด";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
@@ -224,12 +225,12 @@
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.button4.Location = new System.Drawing.Point(48, 226);
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.button4.Location = new System.Drawing.Point(22, 226);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(366, 75);
+            this.button4.Size = new System.Drawing.Size(422, 75);
             this.button4.TabIndex = 14;
-            this.button4.Text = "3.จะพักอาศัยในพิษณุโลกเกิน 14 วัน";
+            this.button4.Text = "3.คนต่างจังหวัดจะพักอาศัยในพิษณุโลกเกิน 14 วัน";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click_1);
@@ -237,11 +238,12 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Yellow;
-            this.button3.Location = new System.Drawing.Point(48, 133);
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.button3.Location = new System.Drawing.Point(22, 133);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(366, 75);
+            this.button3.Size = new System.Drawing.Size(422, 75);
             this.button3.TabIndex = 13;
-            this.button3.Text = "2.จะค้างคืนในพิษณุโลกชั่วคราว";
+            this.button3.Text = "2.คนต่างจังหวัดจะค้างคืนในพิษณุโลกชั่วคราว";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click_2);
@@ -249,11 +251,12 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.SpringGreen;
-            this.button2.Location = new System.Drawing.Point(48, 43);
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.button2.Location = new System.Drawing.Point(22, 43);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(366, 75);
+            this.button2.Size = new System.Drawing.Size(422, 75);
             this.button2.TabIndex = 12;
-            this.button2.Text = "1.เข้าออกไม่ค้างคืนที่พิษณุโลก";
+            this.button2.Text = "1.คนต่างจังหวัดเข้ามาทำธุระไม่ค้างคืนที่พิษณุโลก";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -291,7 +294,7 @@
             this.txtStation.AutoSize = true;
             this.txtStation.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.txtStation.ForeColor = System.Drawing.Color.Red;
-            this.txtStation.Location = new System.Drawing.Point(522, 645);
+            this.txtStation.Location = new System.Drawing.Point(919, 645);
             this.txtStation.Name = "txtStation";
             this.txtStation.Size = new System.Drawing.Size(52, 29);
             this.txtStation.TabIndex = 71;
@@ -301,7 +304,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label18.Location = new System.Drawing.Point(355, 645);
+            this.label18.Location = new System.Drawing.Point(726, 645);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(148, 29);
             this.label18.TabIndex = 68;
@@ -394,20 +397,6 @@
             this.pictureBox1.TabIndex = 53;
             this.pictureBox1.TabStop = false;
             // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.Salmon;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(13, 633);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(241, 54);
-            this.button5.TabIndex = 20;
-            this.button5.TabStop = false;
-            this.button5.Text = "ดูข้อมูลคนกักตัว online";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -495,26 +484,12 @@
             this.txtFullName.TabIndex = 2;
             this.txtFullName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtFullName_KeyDown);
             // 
-            // label1
-            // 
-            this.label1.AllowDrop = true;
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Purple;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(292, 7);
-            this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(6);
-            this.label1.Size = new System.Drawing.Size(264, 44);
-            this.label1.TabIndex = 24;
-            this.label1.Text = "Save Phitsanulok";
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.DarkSlateGray;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(812, 13);
+            this.button1.Location = new System.Drawing.Point(817, 7);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(154, 50);
             this.button1.TabIndex = 0;
@@ -534,6 +509,20 @@
             this.txtCid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtCid.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.txtCid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCid_KeyDown);
+            // 
+            // label9
+            // 
+            this.label9.AllowDrop = true;
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Crimson;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(73, 7);
+            this.label9.Name = "label9";
+            this.label9.Padding = new System.Windows.Forms.Padding(6);
+            this.label9.Size = new System.Drawing.Size(610, 41);
+            this.label9.TabIndex = 107;
+            this.label9.Text = "เดินทางมาจากจังหวัดที่คณะกรรมการฯอนุญาต ไม่ต้องบันทึก";
             // 
             // Form2
             // 
@@ -565,9 +554,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
@@ -581,7 +568,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Label label6;
         internal System.Windows.Forms.MaskedTextBox txtCid;
         internal System.Windows.Forms.TextBox txtVehicleNo;
@@ -593,5 +579,7 @@
         internal System.Windows.Forms.ComboBox cbVehicle;
         internal System.Windows.Forms.ComboBox cbComeFrom;
         internal System.Windows.Forms.MaskedTextBox txtTel;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Label label9;
     }
 }

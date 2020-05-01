@@ -33,6 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button3
@@ -40,11 +41,11 @@
             this.button3.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(208, 163);
+            this.button3.Location = new System.Drawing.Point(156, 275);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(321, 97);
+            this.button3.Size = new System.Drawing.Size(421, 97);
             this.button3.TabIndex = 2;
-            this.button3.Text = " 2.ศูนย์ข้อมูล";
+            this.button3.Text = " 3.ศูนย์ข้อมูล";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -55,7 +56,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(12, 428);
+            this.label1.Location = new System.Drawing.Point(12, 542);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(468, 25);
             this.label1.TabIndex = 3;
@@ -66,11 +67,11 @@
             this.button4.BackColor = System.Drawing.Color.Snow;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(208, 281);
+            this.button4.Location = new System.Drawing.Point(156, 391);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(321, 97);
+            this.button4.Size = new System.Drawing.Size(421, 97);
             this.button4.TabIndex = 4;
-            this.button4.Text = " 3.ตั้งค่า";
+            this.button4.Text = " 4.ตั้งค่า";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -79,21 +80,36 @@
             // 
             this.button2.BackColor = System.Drawing.Color.SpringGreen;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.button2.Location = new System.Drawing.Point(208, 48);
+            this.button2.Location = new System.Drawing.Point(156, 43);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(321, 97);
+            this.button2.Size = new System.Drawing.Size(421, 97);
             this.button2.TabIndex = 1;
-            this.button2.Text = " 1.บันทึกข้อมูล";
+            this.button2.Text = " 1.บันทึกข้อมูล ณ ด่านขาเข้า";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Orange;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(156, 161);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(421, 97);
+            this.button1.TabIndex = 5;
+            this.button1.Text = " 2.รถผ่านข้ามจังหวัด ณ ด่านขาเข้า";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Aqua;
-            this.ClientSize = new System.Drawing.Size(715, 475);
+            this.BackColor = System.Drawing.Color.AliceBlue;
+            this.ClientSize = new System.Drawing.Size(739, 599);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button3);
@@ -113,6 +129,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }
 

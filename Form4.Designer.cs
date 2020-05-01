@@ -81,7 +81,7 @@
             this.cbApi.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.cbApi.FormattingEnabled = true;
             this.cbApi.Items.AddRange(new object[] {
-            "http://203.157.118.6:4000",
+            "http://61.19.22.99:4000",
             "http://61.19.22.99:3000"});
             this.cbApi.Location = new System.Drawing.Point(42, 146);
             this.cbApi.Name = "cbApi";

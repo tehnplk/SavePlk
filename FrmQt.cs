@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,6 +16,129 @@ namespace SavePLK
     public partial class FrmQt : Form
     {
         string cid, fullname, sex, birth, addr, tel, vehicle, vehicle_no, total,come_from, card, version;
+        string[] _hotels;
+
+        private void txtQtHomeMoo_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+                Control ctl;
+                ctl = (Control)sender;
+                ctl.Parent.SelectNextControl(ActiveControl, true, true, true, true);
+            }
+        }
+
+        private void txtQtHomeRoad_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+                txtQtHomeTambol.Focus();
+            }
+        }
+
+        private void txtQtHomeTambol_KeyDown_1(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+                Control ctl;
+                ctl = (Control)sender;
+                ctl.Parent.SelectNextControl(ActiveControl, true, true, true, true);
+            }
+        }
+
+        private void cbQtHomeAmphur_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+                txtTemp.Focus();
+            }
+        }
+
+        private void txtQtHomeTambol_KeyDown_2(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+                cbQtHomeAmphur.Focus();
+            }
+        }
+
+        private void cbQtHomeAmphur_KeyDown_1(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+                txtTemp.Focus();
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+
+            string remoteUri = "http://61.19.22.99/saveplk/web/download/";
+
+            Console.WriteLine($"download...{remoteUri}");
+
+            WebClient myWebClient = new WebClient();            
+            
+            
+            myWebClient.DownloadFile(remoteUri + "/hotel.txt", "./config/hotel.txt");
+
+            myWebClient.DownloadFile(remoteUri + "/hotel.jpg", "./config/hotel.jpg");
+           
+                                 
+            MessageBox.Show("อัพเดทสำเร็จ!!!");
+            this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            frmHotel f = new frmHotel();
+            f.ShowDialog(this);
+        }
+
+        private void txtQtHomeTambol_KeyDown_3(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+                cbQtHomeAmphur.Focus();
+            }
+        }
+
+        private void cbQtHomeAmphur_KeyDown_2(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+                txtTemp.Focus();
+            }
+        }
+
+        private void txtQtHomeTambol_KeyDown_4(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+                cbQtHomeAmphur.Focus();
+               
+            }
+        }
+
+        private void cbQtHomeAmphur_KeyDown_3(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+                txtTemp.Focus();
+
+            }
+        }
 
         public FrmQt()
         {
@@ -50,6 +174,9 @@ namespace SavePLK
                 txtQtHomeAddr.Enabled = false;
                 txtQtHomeTambol.Enabled = false;
                 cbQtHomeAmphur.Enabled = false;
+                txtQtHomeMoo.Enabled = false;
+                txtQtHomeRoad.Enabled = false;
+                
             }
 
         }
@@ -76,22 +203,87 @@ namespace SavePLK
         {
 
             var q_hotel = cbQtHotel.Text.Trim();
+
             var q_home_addr = txtQtHomeAddr.Text.Trim();
+            var q_home_moo = txtQtHomeMoo.Text.Trim();
+            var q_home_road = txtQtHomeRoad.Text.Trim();
+
             var q_home_tambol = txtQtHomeTambol.Text.Trim();
             var q_home_amphur = cbQtHomeAmphur.Text.Trim();
             var q_date_begin = txtQtDateBegin.Text.Trim();
             var temperature = txtTemp.Text.Trim();
 
-            if (q_hotel == "" && q_home_tambol == "" && q_home_amphur == "") {
-                MessageBox.Show("กรุณาระบุสถานที่เข้าพักอย่างใดอย่างหนึ่ง");
-                return ;
+
+            if (this.card == "เหลือง" && q_hotel=="")
+            {
+                MessageBox.Show("บัตรสีเหลือง กรุณาเลือกที่พักที่จังหวัดจัดไว้ให้");
+                cbQtHotel.Focus();
+                return;
             }
 
-            if (temperature.Length == 0) {
+            if (this.card != "เหลือง" && (q_hotel == "" || q_hotel == "ที่บ้าน"))
+            {
+
+                if (q_home_addr == "")
+                {
+                    MessageBox.Show("กรณีเลือกกักตัวที่บ้าน บ้านเลขที่ ต้องไม่เป็นค่าว่าง");
+                    txtQtHomeAddr.Focus();
+                    return;
+                }
+
+                if (q_home_moo=="" && q_home_road =="") {
+                    MessageBox.Show("กรณีเลือกกักตัวที่บ้าน หมู่ที่ หรือ ถนน ต้องไม่เป็นค่าว่าง");
+                    txtQtHomeMoo.Focus();
+                    return;
+                }
+
+                if (q_home_tambol == "")
+                {
+                    MessageBox.Show("กรณีเลือกกักตัวที่บ้าน ตำบล ต้องไม่เป็นค่าว่าง");
+                    txtQtHomeTambol.Focus();
+                    return;
+                }
+
+                if (q_home_amphur.Length < 5)
+                {
+                    Console.WriteLine(q_home_amphur.Length);
+                    MessageBox.Show("กรณีเลือกกักตัวที่บ้าน อำเภอ ต้องไม่เป็นค่าว่าง");
+                    cbQtHomeAmphur.Focus();
+                    return;
+                }
+
+            }
+
+
+            if (temperature == "") {
                 MessageBox.Show("อุณภูมิ ต้องไม่เป็นค่าว่าง");
                 txtTemp.Focus();
                 return;
             }
+
+            string moo = " ม.";
+
+            if (q_home_moo == "" || q_home_moo == "-")
+            {
+                moo = "";
+            }
+            else {
+                moo = moo + q_home_moo;
+            }
+
+            string rd = " ถ.";
+
+            if (q_home_road == "" || q_home_road == "-")
+            {
+                rd = "";
+            }
+            else {
+                rd = rd + q_home_road;
+            }
+
+            q_home_addr = q_home_addr + moo + rd;
+
+
 
 
             //post
@@ -149,13 +341,18 @@ namespace SavePLK
                 return;
             }
 
+            if (content == "0")
+            {
+                MessageBox.Show("ไม่สำเร็จ..กรุณาอัพเดทโปรแกรม...โทรสอบถาม 055-252052 ต่อ 454", "แจ้งเตือน", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             if (content != "1")
             {
                 MessageBox.Show("ไม่สำเร็จ..มีข้อผิดพลาด...โทรสอบถาม 055-252052 ต่อ 454","แจ้งเตือน", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             MessageBox.Show("ส่งข้อมูลสำเร็จ!!!");
-            //MessageBox.Show("ส่งข้อมูลสำเร็จ!!!", "แจ้งเตือน", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
 
@@ -255,17 +452,22 @@ namespace SavePLK
         {
             if (e.KeyData == Keys.Enter)
             {
-                //MessageBox.Show("sss");
+                
                 e.SuppressKeyPress = true;
+                var hotel = cbQtHotel.Text.Trim();
                 if (this.card == "เหลือง")
                 {
-                    txtQtDateBegin.Focus();
+                    txtTemp.Focus();
+                    return;
                 }
-                else {
+
+                if(hotel=="ที่บ้าน" || hotel == "")
+                {
                     txtQtHomeAddr.Focus();
+                    return;
                 }
-                
-                
+                txtTemp.Focus();
+
             }
         }
 
@@ -290,12 +492,25 @@ namespace SavePLK
             cbQtHotel.Items.Clear();
             AutoCompleteStringCollection hotel_items = new AutoCompleteStringCollection();
             string[] hotels = File.ReadAllLines("./config/hotel.txt");
+
+            List<String> _h = new List<string>();
             foreach (string line in hotels)
             {
 
                 Console.WriteLine(line);
-                hotel_items.Add(line);
-                cbQtHotel.Items.Add(line);
+                if(line.Trim() != "")
+                {
+                    hotel_items.Add(line);
+                    cbQtHotel.Items.Add(line);
+                    _h.Add(line);
+                }
+                
+            }
+            _hotels = _h.ToArray();
+
+
+            if (this.card == "เหลือง") {
+                //cbQtHotel.Items.RemoveAt(0);
             }
             cbQtHotel.AutoCompleteCustomSource = hotel_items;
 

@@ -330,7 +330,7 @@ namespace SavePLK
         private void button5_Click(object sender, EventArgs e)
         {
             string version = File.ReadLines("./config/version.txt").First();
-            var url = $"http://ttm.plkhealth.go.th/saveplk/web/index.php?r=covid/income&version={version}";
+            var url = $"http://covid19.plkhealth.go.th/saveplk/web/index.php?r=covid/income&version={version}";
             System.Diagnostics.Process.Start(url);
         }
 
@@ -594,12 +594,14 @@ namespace SavePLK
 
         private void button8_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("บัตรสีชมพู ใช้ผ่านได้เฉพาะด่านในเมืองเท่านั้น ด่านหลักรอบเมือง 10 ด่านห้ามผ่าน ต้องออกบัตรใหม่");
+            MessageBox.Show("บัตรสีชมพู สามารถเดินทางออกไปต่างจังหวัด และเดินทางกลับเข้ามาจากต่างจังหวัด เฉพาะจังหวัดที่คณะกรรมการฯอนุญาตเท่านั้น");
+        
+            //System.Diagnostics.Process.Start("http://covid19.plkhealth.go.th/checkpoint/");
         }
 
         private void Form2_Activated(object sender, EventArgs e)
         {
-            //txtCid.Focus();
+            txtCid.Focus();
         }
 
         private void button3_Click_2(object sender, EventArgs e)
@@ -799,7 +801,7 @@ namespace SavePLK
         private void button7_Click(object sender, EventArgs e)
         {
             string version = File.ReadLines("./config/version.txt").First();
-            var url = $"http://ttm.plkhealth.go.th/saveplk/web/index.php?r=covid/via&version={version}";
+            var url = $"http://covid19.plkhealth.go.th/saveplk/web/index.php?r=covid/default/index&version={version}";
             System.Diagnostics.Process.Start(url);
         }
 

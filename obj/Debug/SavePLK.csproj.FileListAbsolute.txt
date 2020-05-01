@@ -9,7 +9,9 @@ E:\DotNet\SavePLK\SavePLK\obj\Debug\SavePLK.Form1.resources
 E:\DotNet\SavePLK\SavePLK\obj\Debug\SavePLK.Form2.resources
 E:\DotNet\SavePLK\SavePLK\obj\Debug\SavePLK.Form3.resources
 E:\DotNet\SavePLK\SavePLK\obj\Debug\SavePLK.Form4.resources
+E:\DotNet\SavePLK\SavePLK\obj\Debug\SavePLK.frmHotel.resources
 E:\DotNet\SavePLK\SavePLK\obj\Debug\SavePLK.FrmPass.resources
+E:\DotNet\SavePLK\SavePLK\obj\Debug\SavePLK.frmPassport.resources
 E:\DotNet\SavePLK\SavePLK\obj\Debug\SavePLK.FrmQt.resources
 E:\DotNet\SavePLK\SavePLK\obj\Debug\SavePLK.Properties.Resources.resources
 E:\DotNet\SavePLK\SavePLK\obj\Debug\SavePLK.csproj.GenerateResource.cache
@@ -17,4 +19,3 @@ E:\DotNet\SavePLK\SavePLK\obj\Debug\SavePLK.csproj.CoreCompileInputs.cache
 E:\DotNet\SavePLK\SavePLK\obj\Debug\SavePLK.csproj.CopyComplete
 E:\DotNet\SavePLK\SavePLK\obj\Debug\SavePLK.exe
 E:\DotNet\SavePLK\SavePLK\obj\Debug\SavePLK.pdb
-E:\DotNet\SavePLK\SavePLK\obj\Debug\SavePLK.csprojAssemblyReference.cache

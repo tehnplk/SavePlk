@@ -138,8 +138,15 @@ namespace SavePLK
             var response = client.Post(request);
             var content = response.Content;
 
+            
             if (string.IsNullOrEmpty(content)) { 
                 MessageBox.Show("กรุณาเชื่อมต่ออินเตอร์เน็ต");
+                return;
+            }
+
+            if (content == "0")
+            {
+                MessageBox.Show("ไม่สำเร็จ..กรุณาอัพเดทโปรแกรม...โทรสอบถาม 055-252052 ต่อ 454", "แจ้งเตือน", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -149,7 +156,7 @@ namespace SavePLK
                 return;
             }
             MessageBox.Show("ส่งข้อมูลสำเร็จ!!!");
-            //MessageBox.Show("ส่งข้อมูลสำเร็จ!!!", "แจ้งเตือน", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
 
 
 

@@ -160,9 +160,9 @@
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(460, 32);
+            this.label1.Size = new System.Drawing.Size(512, 32);
             this.label1.TabIndex = 3;
-            this.label1.Text = "คนต่างจังหวัดเข้าออกไม่ค้างคืนที่พิษณุโลก";
+            this.label1.Text = "คนต่างจังหวัดเข้ามาทำธุระไม่ค้างคืนที่พิษณุโลก";
             // 
             // FrmPass
             // 

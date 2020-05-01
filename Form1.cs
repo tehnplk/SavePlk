@@ -41,13 +41,21 @@ namespace SavePLK
 
         private void button3_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("http://ttm.plkhealth.go.th/saveplk");
+            string version = File.ReadLines("./config/version.txt").First();
+            var url = $"http://covid19.plkhealth.go.th/saveplk/web/index.php?r=covid/default/index&version={version}";
+            System.Diagnostics.Process.Start(url);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             Form4 f = new Form4();
             f.ShowDialog();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            frmPassport f = new frmPassport();
+            f.ShowDialog(this);
         }
     }
 }
